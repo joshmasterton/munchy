@@ -1,0 +1,56 @@
+@use '../App.scss';
+
+div.input {
+  position: relative;
+  display: flex;
+  height: App.$height;
+  border-radius: App.$round;
+  gap: App.$pad;
+  flex: 1;
+}
+
+label {
+  display: flex;
+  flex: 1;
+}
+
+input {
+  max-height: App.$height;
+  width: 100%;
+  height: App.$height;
+  padding: App.$pad;
+  border-radius: App.$round;
+  flex: 1;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  background: var(--background-shade);
+  outline: var(--outline);
+  transition:
+    box-shadow App.$anim,
+    outline-color App.$anim;
+}
+
+input.clear {
+  padding-right: App.$height + App.$padSmall;
+}
+
+div.input button {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: transparent;
+}
+
+@media (pointer: fine) {
+  input:hover {
+    outline: var(--outline);
+    box-shadow: var(--outline-shadow);
+  }
+}
+
+input:focus {
+  outline: var(--outline);
+  box-shadow: var(--outline-shadow);
+}

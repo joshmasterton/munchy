@@ -1,0 +1,71 @@
+@use '../App.scss';
+
+nav > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: App.$padMedium;
+  padding: App.$padMedium;
+  padding-left: calc(App.$height * 5);
+  z-index: 2;
+}
+
+nav > header > h1 {
+  position: absolute;
+  left: App.$padMedium;
+  display: flex;
+  justify-content: start;
+  width: fit-content;
+  min-height: App.$heightSmall;
+  height: App.$heightSmall;
+  max-height: App.$heightSmall;
+  align-items: center;
+  gap: App.$padSVG;
+}
+
+nav > header > h1 > img {
+  min-width: fit-content;
+  max-width: fit-content;
+  min-height: none;
+  min-height: calc(App.$padLarge / 1.35);
+  max-height: calc(App.$padLarge / 1.35);
+  padding-top: calc(App.$padSmall / 2);
+  border-radius: 0;
+}
+
+nav > header > div.input {
+  display: none;
+}
+
+nav > header > ul {
+  display: none;
+  gap: App.$padMedium;
+}
+
+@media screen and (min-width: App.$widthMedium) {
+  nav > header > ul {
+    display: none;
+  }
+
+  nav > header > div.input {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: App.$widthLarge) {
+  nav > header > ul {
+    display: flex;
+  }
+
+  nav > header > div.input {
+    display: flex;
+  }
+
+  nav > header > button {
+    display: none;
+  }
+}
