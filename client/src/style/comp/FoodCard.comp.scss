@@ -1,0 +1,144 @@
+@use '../App.scss';
+
+a.foodCard,
+a.foodCardTwo {
+  display: flex;
+  align-items: stretch;
+  max-height: fit-content;
+  min-width: none;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  background: var(--background-shade);
+}
+
+a.foodCard:focus,
+a.foodCard:hover,
+a.foodCardTwo:focus,
+a.foodCardTwo:hover {
+  outline: none;
+  box-shadow: none;
+}
+
+.foodCard > div,
+.foodCardTwo > div {
+  min-width: calc(App.$height * 5);
+  min-height: calc(App.$height * 5);
+  overflow: hidden;
+  border-radius: App.$round;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.foodCard > div > img,
+.foodCardTwo > div > img {
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.foodCard > div > img.large,
+.foodCardTwo > div > img.large {
+  transform: scale(1.25);
+}
+
+.foodCard > main,
+.foodCardTwo > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  flex: 1;
+  padding: App.$pad;
+  gap: App.$padSVG;
+  min-width: calc(App.$height * 3);
+}
+
+.foodCard > main > header,
+.foodCardTwo > main > header {
+  display: flex;
+  flex-direction: column;
+  gap: calc(App.$padSmall / 2);
+  flex: 1;
+  min-height: calc(App.$height * 1.5);
+}
+
+.foodCard > main > div,
+.foodCardTwo > main > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: App.$pad;
+}
+
+.foodCard > main > div > div,
+.foodCardTwo > main > div > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: App.$padSVG;
+}
+
+.foodCard > main svg,
+.foodCardTwo > main svg {
+  padding: 0;
+  min-width: App.$pad;
+  min-height: App.$pad;
+  border-radius: 0;
+}
+
+.foodCard > main > div p,
+.foodCardTwo > main > div p {
+  opacity: 100%;
+}
+
+a.foodCardTwo {
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+}
+
+.foodCardTwo > div {
+  min-height: 25rem;
+  overflow: hidden;
+  border-radius: App.$round;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.foodCardTwo > div > img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@media screen and (min-width: App.$widthMedium) {
+  a.foodCardTwo {
+    flex-direction: row;
+  }
+
+  .foodCardTwo > div {
+    min-height: 15rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: App.$round;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .foodCardTwo > main {
+    min-width: calc(App.$height * 5);
+    justify-content: end;
+  }
+
+  .foodCardTwo > main > header {
+    flex: 1;
+  }
+}

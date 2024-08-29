@@ -1,0 +1,28 @@
+@use '../App.scss';
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: App.$height;
+  width: App.$height;
+  border-radius: App.$round;
+  background: var(--background-shade);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  transition:
+    box-shadow App.$anim,
+    outline-color App.$anim;
+}
+
+@media (pointer: fine) {
+  button:hover {
+    outline: var(--outline);
+    box-shadow: var(--outline-shadow);
+  }
+}
+
+button:focus {
+  outline: var(--outline);
+  box-shadow: var(--outline-shadow);
+}
