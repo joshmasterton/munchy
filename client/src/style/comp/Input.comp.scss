@@ -7,6 +7,7 @@ div.input {
   border-radius: App.$round;
   gap: App.$pad;
   flex: 1;
+  width: 100%;
 }
 
 label {
@@ -16,6 +17,7 @@ label {
 
 input {
   max-height: App.$height;
+  min-width: calc(App.$height * 4);
   width: 100%;
   height: App.$height;
   padding: App.$pad;
@@ -38,6 +40,7 @@ div.input button {
   position: absolute;
   right: 0;
   z-index: 1;
+  padding: 0;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   background: transparent;

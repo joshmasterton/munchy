@@ -7,12 +7,35 @@ button {
   height: App.$height;
   width: App.$height;
   border-radius: App.$round;
-  background: var(--background-shade);
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
+  background: transparent;
+  z-index: 1;
+  background: var(--background);
+  cursor: pointer;
   transition:
     box-shadow App.$anim,
     outline-color App.$anim;
+}
+
+button.fixed {
+  position: fixed;
+  z-index: 2;
+  bottom: App.$padMedium;
+  right: App.$padMedium;
+  background: var(--primary);
+}
+
+button.primary {
+  background: var(--primary);
+}
+
+h1 button {
+  width: fit-content;
+  padding: App.$pad;
+}
+
+form > button {
+  padding: App.$pad;
+  width: fit-content;
 }
 
 @media (pointer: fine) {

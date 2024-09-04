@@ -3,74 +3,45 @@
 #home {
   display: flex;
   flex-direction: column;
-  z-index: 1;
-  flex: 1;
+  width: 100%;
   gap: App.$padMedium;
-  padding: App.$padMedium;
+  max-width: App.$widthExtraLarge;
 }
 
-#home > header {
+#home > header,
+#home > main {
   position: relative;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  justify-content: end;
-  gap: App.$padMedium;
-  height: fit-content;
-  border-radius: App.$round;
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
-  background: var(--background-shade);
-}
-
-#home > header > img {
-  bottom: 0;
-  right: 0;
-  min-width: calc(App.$height * 6);
-  min-height: calc(App.$height * 6);
-  object-fit: contain;
-  align-self: end;
-  justify-self: end;
-}
-
-#home > div {
-  display: flex;
-  gap: App.$pad;
-  width: 0;
-  min-width: 100%;
-  border-radius: App.$round;
-  overflow-x: scroll;
-  overflow-y: visible;
-}
-
-#home > h2 {
-  margin: 0;
-}
-
-#home > main {
-  display: flex;
   flex-direction: column;
-  gap: App.$padMedium;
-  flex: 1;
+  justify-content: center;
+  min-height: calc(App.$height * 15);
+  width: 100%;
+  gap: App.$pad;
+  margin-bottom: App.$padMedium;
 }
 
-@media screen and (min-width: App.$widthExtraLarge) {
-  #home > main {
-    flex-direction: row;
-  }
+#home > header > h1 {
+  z-index: 1;
 }
 
-#home > main > header {
-  flex: 2;
-  border-radius: App.$round;
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
-  background: var(--background-shade);
+#home > main > h1 {
+  z-index: 1;
+  align-self: end;
 }
 
 @media screen and (min-width: App.$widthMedium) {
+  #home > header > img,
+  #home > main > img {
+    position: absolute;
+    bottom: 0;
+    padding: App.$padLarge;
+  }
+
   #home > header > img {
-    min-width: calc(App.$height * 7);
-    min-height: calc(App.$height * 7);
+    right: 0;
+  }
+
+  #home > main > img {
+    left: 0;
   }
 }

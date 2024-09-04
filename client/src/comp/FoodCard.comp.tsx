@@ -4,7 +4,8 @@ import { FaHeart } from 'react-icons/fa6';
 import { FaFire } from 'react-icons/fa';
 import { PiMedalFill } from 'react-icons/pi';
 import { BsClockFill } from 'react-icons/bs';
-import { FoodCardProps } from '../../types/comp.types';
+import { FaStar } from 'react-icons/fa6';
+import { ContainerCardProps, FoodCardProps } from '../../types/comp.types';
 import '../style/comp/FoodCard.comp.scss';
 
 export const FoodCard = ({
@@ -63,7 +64,8 @@ export const FoodCardTwo = ({
   likes,
   calories,
   difficult,
-  time
+  time,
+  topRated
 }: FoodCardProps) => {
   const [largeImage, setLargeImage] = useState(false);
 
@@ -83,6 +85,7 @@ export const FoodCardTwo = ({
         <header>
           <div>{title}</div>
           <p>{category}</p>
+          {topRated && <FaStar />}
         </header>
         <div>
           <FaHeart />
@@ -100,6 +103,35 @@ export const FoodCardTwo = ({
           <BsClockFill />
           <p>{time}mins</p>
         </div>
+      </main>
+    </Link>
+  );
+};
+
+export const ContainerCard = ({
+  title,
+  picture,
+  description
+}: ContainerCardProps) => {
+  const [largeImage, setLargeImage] = useState(false);
+
+  return (
+    <Link
+      to="/"
+      onTouchStart={() => setLargeImage(true)}
+      onTouchEnd={() => setLargeImage(false)}
+      onMouseOver={() => setLargeImage(true)}
+      onMouseLeave={() => setLargeImage(false)}
+      className="foodCard"
+    >
+      <div>
+        <img src={picture} alt="food" className={largeImage ? 'large' : ''} />
+      </div>
+      <main>
+        <header>
+          <div>{title}</div>
+          <p>{description}</p>
+        </header>
       </main>
     </Link>
   );

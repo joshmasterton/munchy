@@ -12,6 +12,13 @@ export type ButtonProps = {
   type: 'button' | 'submit';
   children?: ReactNode;
   onClick?: () => void;
+  className?: string;
+};
+
+export type ContainerCardProps = {
+  title: string;
+  picture: string;
+  description: string;
 };
 
 export type FoodCardProps = {
@@ -22,4 +29,5 @@ export type FoodCardProps = {
   calories: number;
   difficult: string;
   time: number;
+  topRated?: boolean;
 };

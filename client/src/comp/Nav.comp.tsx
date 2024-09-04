@@ -1,27 +1,16 @@
 import { Link } from 'react-router-dom';
-import { Input } from './Input.comp';
-import { useState } from 'react';
 import { Button } from './Button.comp';
 import { MdMenu } from 'react-icons/md';
-import munchyLight from '../assets/munchyLight.png';
+import munchy from '../assets/munchy.png';
 import '../style/comp/Nav.comp.scss';
 
 export const Nav = () => {
-  const [search, setSearch] = useState('');
-
   return (
     <nav>
       <header>
         <h1>
-          <img src={munchyLight} alt="Munchy" />
+          <img src={munchy} alt="Munchy" />
         </h1>
-        <Input
-          id="search"
-          placeholder="Search for recipe"
-          value={search}
-          setValue={setSearch}
-          canClear
-        />
         <ul>
           <li>
             <Link to="/">Home</Link>
