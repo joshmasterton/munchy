@@ -3,6 +3,7 @@
 #home {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   width: 100%;
   gap: App.$padMedium;
   max-width: App.$widthExtraLarge;
@@ -43,5 +44,76 @@
 
   #home > main > img {
     left: 0;
+=======
+  z-index: 1;
+  flex: 1;
+  gap: App.$padMedium;
+  padding: App.$padMedium;
+}
+
+#home > header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: App.$padMedium;
+  height: fit-content;
+  border-radius: App.$round;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  background: var(--background-shade);
+}
+
+#home > header > img {
+  bottom: 0;
+  right: 0;
+  min-width: calc(App.$height * 6);
+  min-height: calc(App.$height * 6);
+  object-fit: contain;
+  align-self: end;
+  justify-self: end;
+}
+
+#home > div {
+  display: flex;
+  gap: App.$pad;
+  width: 0;
+  min-width: 100%;
+  border-radius: App.$round;
+  overflow-x: scroll;
+  overflow-y: visible;
+}
+
+#home > h2 {
+  margin: 0;
+}
+
+#home > main {
+  display: flex;
+  flex-direction: column;
+  gap: App.$padMedium;
+  flex: 1;
+}
+
+@media screen and (min-width: App.$widthExtraLarge) {
+  #home > main {
+    flex-direction: row;
+  }
+}
+
+#home > main > header {
+  flex: 2;
+  border-radius: App.$round;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  background: var(--background-shade);
+}
+
+@media screen and (min-width: App.$widthMedium) {
+  #home > header > img {
+    min-width: calc(App.$height * 7);
+    min-height: calc(App.$height * 7);
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
   }
 }

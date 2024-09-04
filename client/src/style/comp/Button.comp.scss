@@ -7,15 +7,22 @@ button {
   height: App.$height;
   width: App.$height;
   border-radius: App.$round;
+<<<<<<< HEAD
   background: transparent;
   z-index: 1;
   background: var(--background);
   cursor: pointer;
+=======
+  background: var(--background-shade);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
   transition:
     box-shadow App.$anim,
     outline-color App.$anim;
 }
 
+<<<<<<< HEAD
 button.fixed {
   position: fixed;
   z-index: 2;
@@ -38,6 +45,8 @@ form > button {
   width: fit-content;
 }
 
+=======
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
 @media (pointer: fine) {
   button:hover {
     outline: var(--outline);

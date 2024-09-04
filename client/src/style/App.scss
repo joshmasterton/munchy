@@ -16,7 +16,11 @@ $padSmall: 0.4rem;
 
 $round: 1rem;
 
+<<<<<<< HEAD
 $fontLarge: 2.5rem;
+=======
+$fontLarge: 1.5rem;
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
 $font: 0.95rem;
 $fontSmall: 0.75rem;
 
@@ -24,6 +28,7 @@ $anim: 0.4s ease;
 
 [data-theme='dark'] {
   --color: white;
+<<<<<<< HEAD
   --danger: rgb(252, 50, 50);
   --success: rgb(96, 181, 35);
   --primary: linear-gradient(45deg, #578f48ff, rgb(146, 165, 60));
@@ -32,6 +37,16 @@ $anim: 0.4s ease;
   --background-shade: rgb(32, 32, 32);
   --outline-shadow: 0 0 0 0.15rem #578f48ff;
   --outline: 0.075rem solid rgb(32, 32, 32);
+=======
+  --color-placeholder: rgb(235, 235, 235);
+  --danger: rgb(252, 50, 50);
+  --success: rgb(96, 181, 35);
+  --primary: linear-gradient(45deg, #1f1f23, #303034ff);
+  --background: rgb(31, 31, 35);
+  --background-shade: rgba(31, 31, 35, 0.75);
+  --outline-shadow: 0 0 0 0.15rem #ffae2d;
+  --outline: 0.075rem solid rgba(31, 31, 35, 0.75);
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
   --opacity: 75%;
 }
 
@@ -47,7 +62,11 @@ $anim: 0.4s ease;
 }
 
 ::placeholder {
+<<<<<<< HEAD
   color: var(--color);
+=======
+  color: var(--color-placeholder);
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
   opacity: var(--opacity);
 }
 
@@ -76,11 +95,32 @@ body {
   height: 100%;
 }
 
+<<<<<<< HEAD
 #root {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+=======
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: left;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding-top: calc($height + ($padMedium));
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
   min-height: 100%;
   padding: $padMedium;
   gap: $padMedium;
@@ -142,6 +182,54 @@ a {
   max-height: $height;
   border-radius: $round;
   backdrop-filter: blur(0rem);
+  transition:
+    box-shadow $anim,
+    outline-color $anim;
+}
+
+@media (pointer: fine) {
+  a:hover {
+    outline: var(--outline);
+    box-shadow: var(--outline-shadow);
+  }
+}
+
+h2 {
+  font-size: calc($fontLarge / 1.15);
+  padding: $pad;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+h1.title {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+h1.title > div {
+  max-width: calc($height * 10);
+  font-size: calc($pad * 2.5);
+  padding: $padMedium;
+  padding-bottom: 0;
+}
+
+h1.title > div:last-child {
+  max-width: calc($height * 10);
+  padding: $padMedium;
+  font-size: $font;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: $pad;
+  max-height: $height;
+  border-radius: $round;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  background: var(--background-shade);
   transition:
     box-shadow $anim,
     outline-color $anim;

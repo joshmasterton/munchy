@@ -7,7 +7,10 @@ div.input {
   border-radius: App.$round;
   gap: App.$pad;
   flex: 1;
+<<<<<<< HEAD
   width: 100%;
+=======
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
 }
 
 label {
@@ -17,7 +20,10 @@ label {
 
 input {
   max-height: App.$height;
+<<<<<<< HEAD
   min-width: calc(App.$height * 4);
+=======
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
   width: 100%;
   height: App.$height;
   padding: App.$pad;
@@ -40,7 +46,10 @@ div.input button {
   position: absolute;
   right: 0;
   z-index: 1;
+<<<<<<< HEAD
   padding: 0;
+=======
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   background: transparent;

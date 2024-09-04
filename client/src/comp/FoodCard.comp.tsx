@@ -4,8 +4,12 @@ import { FaHeart } from 'react-icons/fa6';
 import { FaFire } from 'react-icons/fa';
 import { PiMedalFill } from 'react-icons/pi';
 import { BsClockFill } from 'react-icons/bs';
+<<<<<<< HEAD
 import { FaStar } from 'react-icons/fa6';
 import { ContainerCardProps, FoodCardProps } from '../../types/comp.types';
+=======
+import { FoodCardProps } from '../../types/comp.types';
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
 import '../style/comp/FoodCard.comp.scss';
 
 export const FoodCard = ({
@@ -64,8 +68,12 @@ export const FoodCardTwo = ({
   likes,
   calories,
   difficult,
+<<<<<<< HEAD
   time,
   topRated
+=======
+  time
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
 }: FoodCardProps) => {
   const [largeImage, setLargeImage] = useState(false);
 
@@ -85,7 +93,10 @@ export const FoodCardTwo = ({
         <header>
           <div>{title}</div>
           <p>{category}</p>
+<<<<<<< HEAD
           {topRated && <FaStar />}
+=======
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
         </header>
         <div>
           <FaHeart />
@@ -107,6 +118,7 @@ export const FoodCardTwo = ({
     </Link>
   );
 };
+<<<<<<< HEAD
 
 export const ContainerCard = ({
   title,
@@ -136,3 +148,5 @@ export const ContainerCard = ({
     </Link>
   );
 };
+=======
+>>>>>>> 66425a3eaf09d54f8124ba3c831ba1b03705ba76
