@@ -2,8 +2,8 @@
 
 $height: 2.25rem;
 $heightSmall: 1.5rem;
-$widthLarge: 49rem;
-$widthExtraLarge: 69rem;
+$widthLarge: 50rem;
+$widthExtraLarge: 80rem;
 $widthMedium: 30rem;
 $width: 5rem;
 
@@ -12,9 +12,10 @@ $padSVG: 0.6rem;
 
 $padMedium: 1.75rem;
 $padLarge: 2.5rem;
+$padExtraLarge: 3.5rem;
 $padSmall: 0.4rem;
 
-$round: 1rem;
+$round: 1.5rem;
 
 $fontLarge: 2.5rem;
 $font: 0.95rem;
@@ -26,11 +27,11 @@ $anim: 0.4s ease;
   --color: white;
   --danger: rgb(252, 50, 50);
   --success: rgb(96, 181, 35);
-  --primary: linear-gradient(45deg, #578f48ff, rgb(146, 165, 60));
+  --primary: linear-gradient(45deg, rgb(87, 143, 72), rgb(146, 165, 60));
   --background: rgb(22, 22, 22);
-  --background-transparent: rgba(22, 22, 22, 0.5);
+  --background-transparent: rgba(22, 22, 22, 0.75);
   --background-shade: rgb(32, 32, 32);
-  --outline-shadow: 0 0 0 0.15rem #578f48ff;
+  --outline-shadow: 0 0 0 0.15rem rgb(87, 143, 72);
   --outline: 0.075rem solid rgb(32, 32, 32);
   --opacity: 75%;
 }
@@ -67,7 +68,7 @@ html {
   z-index: -1;
   object-position: right;
   object-fit: cover;
-  background: radial-gradient(rgb(22, 22, 22) 60%);
+  background: rgb(22, 22, 22);
 }
 
 html,
@@ -83,6 +84,7 @@ body {
   align-items: center;
   min-height: 100%;
   padding: $padMedium;
+  padding-top: calc($height + ($padMedium * 2));
   gap: $padMedium;
 }
 
@@ -93,44 +95,13 @@ body {
 h1 {
   font-size: $fontLarge;
   margin: 0;
+  padding: 0;
 }
 
 h2 {
   font-size: calc($fontLarge / 1.15);
   margin: 0;
-}
-
-h1.title,
-h1.titleTwo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  max-width: calc($widthMedium / 1.1);
-  gap: $padMedium;
-  background: var(--background-transparent);
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
-}
-
-@media screen and (min-width: $widthMedium) {
-  h1.title {
-    padding: $padLarge;
-  }
-
-  h1.titleTwo {
-    padding: $padLarge;
-  }
-}
-
-h1.title > div,
-h1.titleTwo > div {
-  font-size: calc($fontLarge * 1.4);
-}
-
-h1.title > div:nth-child(2),
-h1.titleTwo > div:nth-child(2) {
-  font-size: $font;
+  padding: 0;
 }
 
 a {
@@ -141,7 +112,7 @@ a {
   min-height: $height;
   max-height: $height;
   border-radius: $round;
-  backdrop-filter: blur(0rem);
+  background: transparent;
   transition:
     box-shadow $anim,
     outline-color $anim;
@@ -152,47 +123,6 @@ a {
     outline: var(--outline);
     box-shadow: var(--outline-shadow);
   }
-}
-
-h2 {
-  font-size: calc($fontLarge / 1.15);
-  padding: $pad;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-h1.title {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-h1.title > div {
-  max-width: calc($height * 10);
-  font-size: calc($pad * 2.5);
-  padding: $padMedium;
-  padding-bottom: 0;
-}
-
-h1.title > div:last-child {
-  max-width: calc($height * 10);
-  padding: $padMedium;
-  font-size: $font;
-}
-
-a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  padding: $pad;
-  max-height: $height;
-  border-radius: $round;
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
-  background: var(--background-shade);
-  transition:
-    box-shadow $anim,
-    outline-color $anim;
 }
 
 @media (pointer: fine) {

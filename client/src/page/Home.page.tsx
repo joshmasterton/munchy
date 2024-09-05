@@ -25,9 +25,9 @@ export const Home = () => {
     <>
       <Nav />
       <div id="home">
-        <header>
+        <div className="titleOne">
           <img src={food} alt="food" />
-          <h1 className="title">
+          <h1>
             <div>Discover your next meal here, lets eat!</div>
             <div>
               Find your next favourite recipe and add it to your favourites
@@ -45,7 +45,7 @@ export const Home = () => {
               </Button>
             </form>
           </h1>
-        </header>
+        </div>
         <h2>Popular recipes</h2>
         <div className="tabTwo">
           <FoodCard
@@ -149,9 +149,9 @@ export const Home = () => {
             picture={special}
           />
         </div>
-        <main>
+        <div className="titleTwo">
           <img src={plate} alt="plate" />
-          <h1 className="titleTwo">
+          <h1>
             <div>Want to add your own recipe?</div>
             <div>
               Be part of the cooking experience and create your own recipes that
@@ -161,7 +161,7 @@ export const Home = () => {
               Create recipe
             </Button>
           </h1>
-        </main>
+        </div>
         <Footer />
       </div>
     </>

@@ -32,6 +32,7 @@ export const FoodCard = ({
         <img src={picture} alt="food" className={largeImage ? 'large' : ''} />
       </div>
       <main>
+        <img src={picture} alt="food" />
         <header>
           <div>{title}</div>
           <p>{category}</p>
@@ -82,6 +83,7 @@ export const FoodCardTwo = ({
         <img src={picture} alt="food" className={largeImage ? 'large' : ''} />
       </div>
       <main>
+        <img src={picture} alt="food" />
         <header>
           <div>{title}</div>
           <p>{category}</p>
@@ -128,6 +130,7 @@ export const ContainerCard = ({
         <img src={picture} alt="food" className={largeImage ? 'large' : ''} />
       </div>
       <main>
+        <img src={picture} alt="food" />
         <header>
           <div>{title}</div>
           <p>{description}</p>

@@ -9,7 +9,6 @@ button {
   border-radius: App.$round;
   background: transparent;
   z-index: 1;
-  background: var(--background);
   cursor: pointer;
   transition:
     box-shadow App.$anim,

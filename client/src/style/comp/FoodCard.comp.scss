@@ -50,6 +50,11 @@ a.foodCardTwo:hover {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   transition: transform 0.4s ease;
+  overflow: hidden;
+}
+
+.foodCardTwo > div > img {
+  max-height: calc(App.$height * 12);
 }
 
 a.foodCardTwo > div,
@@ -73,6 +78,7 @@ a.foodCardTwo > div > img {
 
 .foodCard > main,
 .foodCardTwo > main {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -80,6 +86,20 @@ a.foodCardTwo > div > img {
   flex: 1;
   padding: App.$pad;
   gap: App.$padSVG;
+  border-top-right-radius: App.$round;
+  border-bottom-right-radius: App.$round;
+  overflow: hidden;
+}
+
+.foodCard > main > img,
+.foodCardTwo > main > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  opacity: 15%;
+  object-fit: cover;
+  filter: blur(1rem);
 }
 
 .foodCard > main > header,
@@ -90,6 +110,7 @@ a.foodCardTwo > div > img {
   width: 100%;
   min-height: calc(App.$height * 1.5);
   gap: calc(App.$padSmall / 2);
+  z-index: 1;
 }
 
 .foodCard > main > header > svg,
@@ -110,6 +131,7 @@ a.foodCardTwo > div > img {
   justify-content: start;
   align-items: center;
   gap: App.$pad;
+  z-index: 1;
 }
 
 .foodCard > main svg,

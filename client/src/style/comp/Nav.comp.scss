@@ -1,19 +1,35 @@
 @use '../App.scss';
 
-nav {
+nav#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: App.$widthExtraLarge;
+  z-index: 2;
 }
 
 nav > header {
   width: 100%;
-  max-width: App.$widthExtraLarge;
+  padding: App.$padMedium;
+  padding-top: App.$pad;
+  padding-bottom: App.$pad;
+  max-width: calc(App.$widthExtraLarge + App.$padExtraLarge);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: App.$padMedium;
+  transition: transform App.$anim;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  background: var(--background-transparent);
+}
+
+nav > header.hidden {
+  transform: translateY(-10rem);
 }
 
 nav > header > h1 {

@@ -1,5 +1,84 @@
 @use '../App.scss';
 
+.titleOne,
+.titleTwo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  min-height: calc(App.$height * 15);
+  width: 100%;
+  max-width: calc(App.$widthLarge * 1.4);
+  gap: App.$pad;
+  margin-bottom: App.$pad;
+}
+
+.titleOne > h1,
+.titleTwo > h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
+  max-width: calc(App.$widthMedium / 1.1);
+  background: var(--background-transparent);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  z-index: 1;
+}
+
+.titleTwo > h1 {
+  align-self: end;
+}
+
+.titleOne > img,
+.titleTwo > img {
+  margin-bottom: App.$pad;
+}
+
+.titleOne > h1 > div,
+.titleTwo > h1 > div {
+  font-size: calc(App.$fontLarge * 1.4);
+  padding-bottom: App.$pad;
+}
+
+.titleOne > h1 > div:nth-child(2),
+.titleTwo > h1 > div:nth-child(2) {
+  font-size: App.$font;
+  padding-bottom: App.$padLarge;
+}
+
+@media screen and (min-width: App.$widthMedium) {
+  .titleOne > h1 {
+    padding-left: App.$padLarge;
+    padding-right: App.$padLarge;
+  }
+
+  .titleTwo > h1 {
+    padding-left: App.$padExtraLarge;
+    padding-right: App.$padExtraLarge;
+  }
+
+  .titleOne > img,
+  .titleTwo > img {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: App.$padLarge;
+  }
+
+  .titleOne > img {
+    right: 0;
+    object-position: right;
+  }
+
+  .titleTwo > img {
+    left: 0;
+    object-position: left;
+  }
+}
+
 .tabOne {
   display: flex;
   flex-direction: column;
